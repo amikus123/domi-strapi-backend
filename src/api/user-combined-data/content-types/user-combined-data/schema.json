@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_combined_datas",
+  "info": {
+    "singularName": "user-combined-data",
+    "pluralName": "user-combined-datas",
+    "displayName": "UserCombinedData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "userDiet": {
+      "displayName": "userDiet",
+      "type": "component",
+      "repeatable": false,
+      "component": "user.user-diet"
+    },
+    "userData": {
+      "displayName": "userData",
+      "type": "component",
+      "repeatable": false,
+      "component": "user.user-data"
+    },
+    "dishPreferences": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.dish-preference"
+    },
+    "ingredientPreferences": {
+      "displayName": "ingredientPreference",
+      "type": "component",
+      "repeatable": true,
+      "component": "user.ingredient-preference"
+    }
+  }
+}

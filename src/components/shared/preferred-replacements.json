@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_user_diet_preferred_replacements",
+  "info": {
+    "displayName": "OriginalPrefrered",
+    "icon": "bacon",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "originalName": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "preferredName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

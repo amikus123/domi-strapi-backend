@@ -8,43 +8,64 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
-      "unique": true,
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "nutrients": {
+      "displayName": "nameAmount",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.name-amount",
       "required": true
+    },
+    "ingredients": {
+      "displayName": "ingredient",
+      "type": "component",
+      "repeatable": true,
+      "component": "dish.ingredient",
+      "required": true
+    },
+    "dishPage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dish-page.dish-page"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "meal": {
+      "type": "enumeration",
+      "enum": [
+        "obiad",
+        "sniadanie"
+      ],
+      "default": "sniadanie",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": false,
+      "default": "desc"
     },
     "recipe": {
       "type": "richtext",
-      "required": true
-    },
-    "indigrients": {
-      "type": "dynamiczone",
-      "components": [
-        "dish.indigrient"
-      ]
-    },
-    "dishTimeCategory": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::dish-category.dish-category"
-    },
-    "dish_indigrient_categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::dish-indigrient-category.dish-indigrient-category"
-    },
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      "default": "recipe",
+      "required": false
     }
   }
 }

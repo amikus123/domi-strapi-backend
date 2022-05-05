@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diets",
+  "info": {
+    "singularName": "diet",
+    "pluralName": "diets",
+    "displayName": "diet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "days": {
+      "displayName": "days",
+      "type": "component",
+      "repeatable": true,
+      "component": "diet.days"
+    },
+    "dishReplacements": {
+      "displayName": "dishPossibleReplacements",
+      "type": "component",
+      "repeatable": true,
+      "component": "diet.dish-possible-replacements"
+    },
+    "dietImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "dietDescription": {
+      "type": "string",
+      "default": "test"
+    }
+  }
+}

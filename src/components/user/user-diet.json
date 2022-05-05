@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_user_user_diets",
+  "info": {
+    "displayName": "userDiet",
+    "icon": "american-sign-language-interpreting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "timeRange": {
+      "displayName": "timeRange",
+      "type": "component",
+      "repeatable": false,
+      "component": "user.time-range",
+      "required": true
+    },
+    "diet": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::diet.diet"
+    }
+  }
+}
