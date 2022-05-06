@@ -1,5 +1,6 @@
 {
-  "collectionName": "components_diet_dish_possible_replacements",
+  "collectionName": "c_d_d_p_r",
+
   "info": {
     "displayName": "DPReplacements",
     "icon": "balance-scale-left",
